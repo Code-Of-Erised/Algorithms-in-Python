@@ -1,0 +1,17 @@
+def linear_search(elements, key):
+    for x in elements:
+        if x == key:
+            return elements.index(x)
+            break
+    return -1
+                   
+elements = input('Enter list of elements')
+elements = elements.split()
+elements = [int(x) for x in elements]
+key = int(input('Number you want to search for :'))
+
+index = linear_search(elements, key)
+if index < 0:
+    print('{} was not found.'.format(key))
+else:
+    print('{} was found at index {}.'.format(key, index))    
